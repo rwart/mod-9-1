@@ -1,13 +1,19 @@
-var a = 0;
-var b = 0;
-var value = 0;
-a = prompt('wprowadź a');
-b = prompt('wprowadź b');
-value = a * a - b * b;
-if (value > 0) {
-  console.log('wynik dodatni = ' + value);
-} else if (value < 0) {
-  console.log('wynik ujemny = ' + value);
-} else {
-  console.log('wynik równy zero');
+'use strict'
+
+function getTriangleArea(a, h) {
+  if ((a <= 0) || (h <= 0)) {
+    return 'Nieprawidłowe dane';
+  } else {
+    return a * h / 2;
+  }
 }
+
+console.log(getTriangleArea(10, 6));
+
+var triangle1Area = getTriangleArea(10, 15);
+var triangle2Area = getTriangleArea(20, 20);
+var triangle3Area = getTriangleArea(30, 25);
+
+console.log('triangle1Area = ' + triangle1Area +
+          '  triangle2Area = ' + triangle2Area +
+          '  triangle3Area = ' + triangle3Area);
